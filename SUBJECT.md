@@ -49,7 +49,7 @@
 [X] When typing `!ban <A member nickname>`, your bot should ban that member from the server (**Test with caution**)
 
 ### It's all fun and games
-[ ] When typing `!xkcd`, your post should post a random comic from https://xkcd.com
+[X] When typing `!xkcd`, your post should post a random comic from https://xkcd.com
 
 [ ] When typing `!poll <question> <choice1?> <choice2?>, ... <choice n?> `, your bot should post a @here mention followed by your question. If none of the choice arguments are filled, your bot should by default react with one :thumbsup: emoji and one :thumbsdown: emoji in order to allow people to vote. If at least two choices arguments are filled, the bot should react with the appropriate emojis. Any other call should result in an error
 - Example : `!poll "Should we get burgers or salad tonight ?" :hamburger: :salad:`

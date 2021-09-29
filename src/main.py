@@ -1,5 +1,6 @@
 import os
 import discord
+import random
 from discord import permissions
 from discord.ext import commands
 
@@ -13,7 +14,7 @@ bot = commands.Bot(
     case_insensitive=True  # Commands aren't case-sensitive
 )
 
-bot.author_id = "" # Change to your discord id!!!
+bot.author_id =  "" # Change to your discord id!!!
 
 @bot.event
 async def on_ready():  # When the bot is ready
@@ -99,7 +100,7 @@ async def mute(ctx, name):
     for member in members:
         if member.name == name:
             user = member
-    
+
     # Check if the role is already given
     for role in ctx.guild.roles:
         if role.name == "Ghost":
@@ -118,7 +119,7 @@ async def mute(ctx, name):
         role = await ctx.guild.create_role(name="Ghost", permissions=permissions)
         await user.add_roles(role)
 
-# Function that ban the target membre
+# Function that ban the target member
 # Activate the command with : "!ban <nickname>"
 @bot.command()
 async def ban(ctx, name):
@@ -136,6 +137,19 @@ async def ban(ctx, name):
     if exist :
         await user.ban()
 
+# Function that post a random comic
+# Activate the command with : "!xkcd"
+@bot.command()
+async def xkcd(ctx):
+    number = random.randrange(1, 2521)
+    image_url = 'https://xkcd.com/{}/'.format(number)
+    await ctx.send(image_url)
+
+# Function that create a poll
+# Activate the command with : "!poll <question> <choice1> <choice2>"
+@bot.command()
+async def poll(ctx, name):
+    return 0
 
 token = ""
-bot.run(token)  # Starts the bot
+bot.run(token)  # Starts the botz

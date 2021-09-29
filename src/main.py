@@ -148,8 +148,9 @@ async def xkcd(ctx):
 # Function that create a poll
 # Activate the command with : "!poll <question> <choice1> <choice2>"
 @bot.command()
-async def poll(ctx, name):
-    return 0
+async def poll(ctx, question, *args):
+    await ctx.send("@here" + question)
+
 
 token = ""
 bot.run(token)  # Starts the botz

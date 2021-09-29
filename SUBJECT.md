@@ -35,18 +35,18 @@
 
 ### Warm-up 
 
-[ ] When typing `!name` the bot should write back the name of the user typing the command
+[X] When typing `!name` the bot should write back the name of the user typing the command
 
-[ ] When typing `!count` the bot should write back for each possible status (Online, Offline, Idle, Do not disturb) the number of members (including yourself) in the server with that status
+[X] When typing `!count` the bot should write back for each possible status (Online, Offline, Idle, Do not disturb) the number of members (including yourself) in the server with that status
 - Example : "3 members are online, 2 are idle and 4 are off"
 - Extra mile : Instead of counting the members, list them sorted by status
 
 ### Administration
-[ ] When typing `!admin <A member nickname>`, your bot should create an Admin role (if it doesn't exists) on your server, allowing them to manage channels, kick and ban members, and give it to the member in parameter
+[X] When typing `!admin <A member nickname>`, your bot should create an Admin role (if it doesn't exists) on your server, allowing them to manage channels, kick and ban members, and give it to the member in parameter
 
-[ ] When typing `!mute <A member nickname>`, your bot should create a Ghost role (if it doesn't exists), disabling all textual channels permissions for that member. When typing that command towards an already muted member, the action should be reverted
+[-] When typing `!mute <A member nickname>`, your bot should create a Ghost role (if it doesn't exists), disabling all textual channels permissions for that member. When typing that command towards an already muted member, the action should be reverted
 
-[ ] When typing `!ban <A member nickname>`, your bot should ban that member from the server (**Test with caution**)
+[X] When typing `!ban <A member nickname>`, your bot should ban that member from the server (**Test with caution**)
 
 ### It's all fun and games
 [ ] When typing `!xkcd`, your post should post a random comic from https://xkcd.com
